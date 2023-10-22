@@ -8,10 +8,12 @@ export default async function Home() {
   return (
     <>
       <h1>Welcome Animelist</h1>
-      <div className="grid grid-cols-3 gap-3">
-        {anime.data.map((data) => {
-          return <Card dataAnime={data} />;
-        })}
+      <div className="container mx-auto flex-1">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+          {anime.data.map((data) => {
+            return <Card dataAnime={data} key={data.mal_id} />;
+          })}
+        </div>
       </div>
     </>
   );
