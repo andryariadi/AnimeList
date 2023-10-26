@@ -6,8 +6,8 @@ export default function Navbar() {
   return (
     <>
       <header>
-        <div className="container mx-auto">
-          <div className="bg-amber-500 py-5 px-3 md:px-[150px] flex justify-between">
+        <div className="mx-auto">
+          <div className="bg-amber-500 py-5 px-3 lg:px-[150px] flex justify-between">
             <Link href="/" className="font-bold text-2xl text-white">
               <Image src={Icon} width={150} height={150} />
             </Link>
