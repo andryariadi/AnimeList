@@ -1,9 +1,8 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import { Poppins } from "next/font/google";
-("@next/font/google");
 
-const inter = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
 
 export const metadata = {
   title: "AnimeList",
@@ -13,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true}>
+      <body className={`${poppins.className} bg-zinc-800`} suppressHydrationWarning={true}>
         <Navbar />
         {children}
       </body>
