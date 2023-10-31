@@ -1,6 +1,7 @@
 "use client";
 
 import Banner from "@/components/Banner";
+import Card from "@/components/Card";
 import { useEffect, useState } from "react";
 
 export default function Populer() {
@@ -8,7 +9,7 @@ export default function Populer() {
   const [topAnime, setTopAnime] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?page=${page}`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?page=${page}&limit=24`);
     const data = await response.json();
     setTopAnime(data);
   };
@@ -20,6 +21,7 @@ export default function Populer() {
   return (
     <>
       <Banner />
+      <Card dataAnime={topAnime} />
     </>
   );
 }
