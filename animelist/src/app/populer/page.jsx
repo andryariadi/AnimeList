@@ -2,6 +2,7 @@
 
 import Banner from "@/components/Banner";
 import Card from "@/components/Card";
+import Pagination from "@/components/Pagination";
 import { useEffect, useState } from "react";
 
 export default function Populer() {
@@ -20,8 +21,9 @@ export default function Populer() {
 
   return (
     <>
-      <Banner />
+      <Banner title={`Top Anime #${page}`} />
       <Card dataAnime={topAnime} />
+      <Pagination />
     </>
   );
 }
