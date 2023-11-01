@@ -1,12 +1,21 @@
 import { TbPlayerTrackPrevFilled, TbPlayerTrackNextFilled } from "react-icons/tb";
 
-export default function Pagination({ number, nextPage, lastPage }) {
+export default function Pagination({ number, setPage, lastPage }) {
+  const scroolTop = () => {
+    scrollTo({
+      behavior: "smooth",
+      top: 0,
+    });
+  };
+
   const handleNextPage = () => {
-    nextPage((next) => next + 1);
+    setPage((next) => next + 1);
+    scroolTop();
   };
 
   const handlePrevPage = () => {
-    nextPage((prev) => prev - 1);
+    setPage((prev) => prev - 1);
+    scroolTop();
   };
   return (
     <>
