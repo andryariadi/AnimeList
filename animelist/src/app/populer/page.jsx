@@ -23,7 +23,7 @@ export default function Populer() {
     <>
       <Banner title={`Top Anime #${page}`} />
       <Card dataAnime={topAnime} />
-      <Pagination />
+      <Pagination number={page} />
     </>
   );
 }
