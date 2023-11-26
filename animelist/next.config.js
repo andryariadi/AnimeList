@@ -6,6 +6,7 @@ const nextConfig = {
         hostname: "cdn.myanimelist.net",
       },
     ],
+    domains: ["img.youtube.com"],
   },
 };
 

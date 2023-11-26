@@ -1,10 +1,21 @@
 "use client";
+
 import Error from "@/app/assets/error.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { TbLogout2 } from "react-icons/tb";
 
 export default function NotFound() {
+  const router = useRouter();
+
+  useEffect(() => {
+    setTimeout(() => {
+      router.push("/");
+    }, 5000);
+  }, []);
+
   return (
     <>
       <div className="mt-[-32px] text-amber-500 ">
