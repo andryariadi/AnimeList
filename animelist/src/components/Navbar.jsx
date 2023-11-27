@@ -14,11 +14,13 @@ export default function Navbar() {
   const handleSerach = (event) => {
     const keyword = searchRef.current.value;
 
-    if (!keyword) return;
+    if (!keyword || keyword.trim() === "") return;
 
     if (event.key === "Enter" || event.type === "click") {
       event.preventDefault();
       router.push(`/search/${keyword}`);
+
+      searchRef.current.value = "";
     }
   };
 

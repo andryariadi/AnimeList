@@ -1,4 +1,4 @@
-import { getAnimeResponse } from "@/app/libs/api-libs";
+import { getAnimeResponse } from "@/libs/api-libs";
 import VideoPlayer from "@/components/VideoPlayer";
 import Image from "next/image";
 
@@ -56,7 +56,7 @@ export default async function DetailAnime({ params }) {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-3 mb-5 bg-yellow-500">
+      <div className="flex justify-center mt-3 mb-5">
         <VideoPlayer youtubeId={dataAnime.trailer.youtube_id} />
       </div>
     </>

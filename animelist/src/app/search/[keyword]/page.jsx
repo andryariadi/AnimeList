@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Card from "@/components/Card";
-import { getAnimeResponse } from "@/app/libs/api-libs";
+import { getAnimeResponse } from "@/libs/api-libs";
 
 export default async function SearchPage({ params }) {
   const { keyword } = params;

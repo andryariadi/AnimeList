@@ -4,7 +4,7 @@ import Banner from "@/components/Banner";
 import Card from "@/components/Card";
 import Pagination from "@/components/Pagination";
 import { useEffect, useState } from "react";
-import { getAnimeResponse } from "../libs/api-libs";
+import { getAnimeResponse } from "../../libs/api-libs";
 
 export default function Populer() {
   const [page, setPage] = useState(1);
