@@ -6,6 +6,7 @@ import Icon from "@/app/assets/icon-navbar.svg";
 import { BiSearchAlt } from "react-icons/bi";
 import { useRef } from "react";
 import { useRouter } from "next/navigation";
+import LoginGithub from "./LoginGithub";
 
 export default function Navbar() {
   const searchRef = useRef();
@@ -38,6 +39,7 @@ export default function Navbar() {
                 <BiSearchAlt size={24} />
               </button>
             </div>
+            <LoginGithub />
           </div>
         </div>
       </header>
