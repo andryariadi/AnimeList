@@ -20,6 +20,8 @@ const LoginGithub = async () => {
   );
 };
 
+export default LoginGithub;
+
 // export const getServerSideProps = async () => {
 //   const user = await getServerSession(authOption);
 
@@ -29,5 +31,3 @@ const LoginGithub = async () => {
 //     },
 //   };
 // };
-
-export default LoginGithub;

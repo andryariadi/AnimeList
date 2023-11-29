@@ -4,8 +4,12 @@ import Icon from "@/app/assets/icon-navbar.svg";
 import LoginGithub from "./LoginGithub";
 import InputSearch from "./InputSearch";
 import { FaUser } from "react-icons/fa";
+import { authUserSession } from "@/libs/auth-libs";
 
-export default function Navbar() {
+export default async function Navbar() {
+  const user = await authUserSession();
+
+  console.log(user, "<--- dinavbar");
   return (
     <>
       <header>
@@ -20,7 +24,7 @@ export default function Navbar() {
             <div className="flex align items-center gap-x-3">
               <div>
                 <Link href="/profile" className="flex items-center gap-x-1 text-slate-700">
-                  <p>UserName</p>
+                  <p>{user?.name}</p>
                   <FaUser size={23} />
                 </Link>
               </div>
