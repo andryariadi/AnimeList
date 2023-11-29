@@ -1,10 +1,8 @@
+import { authUserSession } from "@/libs/auth-libs";
 import Link from "next/link";
-// import { authUserSession } from "@/libs/auth-libs";
-import { getServerSession } from "next-auth";
-import { authOption } from "@/app/api/auth/[...nextauth]/route";
 
-export default async function LoginGithub() {
-  const user = await getServerSession(authOption);
+const LoginGithub = async () => {
+  const user = await authUserSession();
 
   const actionLabel = user ? "Logout" : "Login";
   const actionUrl = user ? "/api/auth/signout" : "/api/auth/signin";
@@ -20,4 +18,16 @@ export default async function LoginGithub() {
       </div>
     </>
   );
-}
+};
+
+// export const getServerSideProps = async () => {
+//   const user = await getServerSession(authOption);
+
+//   return {
+//     props: {
+//       user,
+//     },
+//   };
+// };
+
+export default LoginGithub;
