@@ -25,7 +25,7 @@ export default async function Navbar() {
               <div>
                 <Link href="/profile" className="flex items-center gap-x-1 text-slate-700">
                   <p>{user?.name}</p>
-                  <FaUser size={23} />
+                  {user ? <FaUser size={24} /> : null}
                 </Link>
               </div>
               <LoginGithub />
