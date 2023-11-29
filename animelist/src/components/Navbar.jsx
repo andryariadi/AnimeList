@@ -3,6 +3,7 @@ import Link from "next/link";
 import Icon from "@/app/assets/icon-navbar.svg";
 import LoginGithub from "./LoginGithub";
 import InputSearch from "./InputSearch";
+import { FaUser } from "react-icons/fa";
 
 export default function Navbar() {
   return (
@@ -16,7 +17,15 @@ export default function Navbar() {
             <div className="flex relative">
               <InputSearch />
             </div>
-            <LoginGithub />
+            <div className="flex align items-center gap-x-3">
+              <div>
+                <Link href="/profile" className="flex items-center gap-x-1 text-slate-700">
+                  <p>UserName</p>
+                  <FaUser size={23} />
+                </Link>
+              </div>
+              <LoginGithub />
+            </div>
           </div>
         </div>
       </header>

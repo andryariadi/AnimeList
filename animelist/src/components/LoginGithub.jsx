@@ -12,7 +12,7 @@ const LoginGithub = async () => {
   return (
     <>
       <div>
-        <Link href={actionUrl} className="semibold text-xl text-white">
+        <Link href={actionUrl} className={`semibold text-sm px-3 py-1 rounded text-white ${user ? "bg-rose-700" : "bg-slate-700"}`}>
           {actionLabel}
         </Link>
       </div>
